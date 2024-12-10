@@ -180,37 +180,37 @@ function loadModel(path, position, scale, rotation) {
 
 // Load the models
 loadModel(
-  "/src/assets/model/Gengar.glb",
+  "/model/Gengar.glb",
   { x: -80, y: -40, z: -170 },
   { x: 1, y: 1, z: 1 },
   { x: 0, y: Math.PI / 2, z: 0 }
 );
 loadModel(
-  "/src/assets/model/Charizard.glb",
+  "/model/Charizard.glb",
   { x: -80, y: -40, z: -140 },
   { x: 8, y: 8, z: 8 },
   { x: 0, y: Math.PI / 2, z: 0 }
 );
 loadModel(
-  "/src/assets/model/Mario.glb",
+  "/model/Mario.glb",
   { x: -130, y: -40, z: -280 },
   { x: 7, y: 7, z: 7 },
   { x: 0, y: Math.PI / 4, z: 0 }
 );
 loadModel(
-  "/src/assets/model/Ditto.glb",
+  "/model/Ditto.glb",
   { x: -80, y: -40, z: -195 },
   { x: 7, y: 7, z: 7 },
   { x: 0, y: Math.PI / 16, z: 0 }
 );
 loadModel(
-  "/src/assets/model/Magnemite.glb",
+  "/model/Magnemite.glb",
   { x: -80, y: -10, z: -220 },
   { x: 7, y: 7, z: 7 },
   { x: 0, y: Math.PI / -4, z: 0 }
 );
 loadModel(
-  "/src/assets/model/Magneton.glb",
+  "/model/Magneton.glb",
   { x: -80, y: 10, z: -250 },
   { x: 7, y: 7, z: 7 },
   { x: 0, y: Math.PI / -6, z: 0 }
@@ -219,7 +219,7 @@ loadModel(
 // Load the third model (Portfolio)
 let model4;
 loader.load(
-  "/src/assets/model/Portfolio.glb",
+  "/model/Portfolio.glb",
   (gltf) => {
     model4 = gltf.scene;
     model4.position.set(20, -5, 177); // Position the third model
@@ -242,7 +242,7 @@ loader.load(
 // Load the fourth model (Pedro)
 let model6;
 loader.load(
-  "/src/assets/model/Pedro.glb",
+  "/model/Pedro.glb",
   (gltf) => {
     model6 = gltf.scene;
     model6.position.set(20, -5, 177); // Position the fourth model
@@ -259,7 +259,7 @@ loader.load(
 // Load the fourth model (Pedro)
 let model1;
 loader.load(
-  "/src/assets/model/Dev.glb",
+  "/model/Dev.glb",
   (gltf) => {
     model1 = gltf.scene;
     model1.position.set(20, -5, 177); // Position the fourth model
@@ -280,7 +280,7 @@ const originalModelScales = []; // Array to store the original scales
 
 let model7;
 loader.load(
-  "/src/assets/model/Monitor.glb",
+  "/model/Monitor.glb",
   (gltf) => {
     model7 = gltf.scene;
     model7.position.set(-100, -10, 30); // Position the fourth model
@@ -299,7 +299,7 @@ loader.load(
 
 let model8;
 loader.load(
-  "/src/assets/model/Tablet.glb",
+  "/model/Tablet.glb",
   (gltf) => {
     model8 = gltf.scene;
     model8.position.set(-90, -10, 10); // Position the fourth model
@@ -320,7 +320,7 @@ loader.load(
 
 let model9;
 loader.load(
-  "/src/assets/model/Phone.glb",
+  "/model/Phone.glb",
   (gltf) => {
     model9 = gltf.scene;
     model9.position.set(-90, -20, 30); // Position the fourth model
@@ -339,7 +339,7 @@ loader.load(
 
 let model13;
 loader.load(
-  "/src/assets/model/Unity.glb",
+  "/model/Unity.glb",
   (gltf) => {
     model13 = gltf.scene;
     model13.position.set(130, -30, -260); // Position the fourth model
@@ -355,7 +355,7 @@ loader.load(
 
 let model14;
 loader.load(
-  "/src/assets/model/Controller.glb",
+  "/model/Controller.glb",
   (gltf) => {
     model14 = gltf.scene;
     model14.position.set(180, -10, -240); // Position the fourth model
@@ -372,7 +372,7 @@ loader.load(
 
 let model15;
 loader.load(
-  "/src/assets/model/Pmodel.glb",
+  "/model/Pmodel.glb",
   (gltf) => {
     model15 = gltf.scene;
     model15.position.set(64, -20, 180); // Position the fourth model
@@ -390,7 +390,7 @@ loader.load(
 
 let model19;
 loader.load(
-  "/src/assets/model/Spaceship.glb",
+  "/model/Spaceship.glb",
   (gltf) => {
     model19 = gltf.scene;
     model19.position.set(56, -20, 173); // Position the fourth model
@@ -412,7 +412,7 @@ const additionalOriginalModelScales = []; // Store their original scales
 
 let model16;
 loader.load(
-  "/src/assets/model/Robot.glb",
+  "/model/Robot.glb",
   (gltf) => {
     model16 = gltf.scene;
     model16.position.set(330, -20, -20); // Position the fourth model
@@ -431,7 +431,7 @@ loader.load(
 
 let model17;
 loader.load(
-  "/src/assets/model/Cpu.glb",
+  "/model/Cpu.glb",
   (gltf) => {
     model17 = gltf.scene;
     model17.position.set(350, 10, -30); // Position the fourth model
@@ -450,7 +450,7 @@ loader.load(
 
 let model18;
 loader.load(
-  "/src/assets/model/Chat.glb",
+  "/model/Chat.glb",
   (gltf) => {
     model18 = gltf.scene;
     model18.position.set(360, -20, -30); // Position the fourth model
@@ -477,7 +477,7 @@ const beanOriginalPositions = [];
 const beanTargetPosition = new THREE.Vector3(0, -100, -200);
 
 loader.load(
-  "/src/assets/model/Bean.glb", // Path to the fifth model
+  "/model/Bean.glb", // Path to the fifth model
   (gltf) => {
     model5 = gltf.scene;
 
@@ -561,49 +561,49 @@ function animateBeans(scrollProgress) {
 // Array of image paths, positions, sizes, and rotations
 const images = [
   {
-    path: "/src/assets/images/Screen1.png",
+    path: "/images/Screen1.png",
     position: { x: 150, y: 0, z: -270 },
     size: { width: 50, height: 30 },
     rotation: { x: 0, y: Math.PI / 4, z: 0 }, // 45° rotation around Y-axis
   },
   {
-    path: "/src/assets/images/Screen2.png",
+    path: "/images/Screen2.png",
     position: { x: 180, y: -25, z: -250 },
     size: { width: 40, height: 25 },
     rotation: { x: 0, y: Math.PI / 12, z: 0 }, // Rotated in multiple axes
   },
   {
-    path: "/src/assets/images/Screen3.png",
+    path: "/images/Screen3.png",
     position: { x: 190, y: 5, z: -250 },
     size: { width: 20, height: 15 },
     rotation: { x: 0, y: Math.PI / -4, z: 0 }, // 90° rotation around Z-axis
   },
   {
-    path: "/src/assets/images/Verde.png",
+    path: "/images/Verde.png",
     position: { x:300, y:-20, z:130 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
   },
   {
-    path: "/src/assets/images/Viseu.png",
+    path: "/images/Viseu.png",
     position: { x:295, y:-20, z:170 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
   },
   {
-    path: "/src/assets/images/Ware.png",
+    path: "/images/Ware.png",
     position: { x:290, y:-20, z:210 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
   },
   {
-    path: "/src/assets/images/Unity.jpg",
+    path: "/images/Unity.jpg",
     position: { x:285, y:-20, z:250 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
   },
   {
-    path: "/src/assets/images/Blender.jpg",
+    path: "/images/Blender.jpg",
     position: { x:280, y:-20, z:290 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
