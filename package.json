@@ -1,14 +1,13 @@
 {
-  "name": "my-threejs-react-app",
+  "name": "portfolio-1",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run build",
+    "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "start": "npx serve -s dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "legendary-cursor": "^1.0.2",
