@@ -193,7 +193,7 @@ loadModel(
 );
 loadModel(
   "/model/Mario.glb",
-  { x: -130, y: -40, z: -280 },
+  { x: -90, y: -40, z: -240 },
   { x: 7, y: 7, z: 7 },
   { x: 0, y: Math.PI / 4, z: 0 }
 );
@@ -205,7 +205,7 @@ loadModel(
 );
 loadModel(
   "/model/Magnemite.glb",
-  { x: -80, y: -10, z: -220 },
+  { x: -90, y: -10, z: -210 },
   { x: 7, y: 7, z: 7 },
   { x: 0, y: Math.PI / -4, z: 0 }
 );
@@ -616,13 +616,13 @@ const hoverStatesImages = []; // Track hover states for images
 const originalScales = []; // Store original scales for images
 const links = [
   null,
-  "https://example2.com",
-  "https://example3.com",
-  "https://example3.com",
-  "https://example3.com",
-  "https://example3.com",
+  "http://193.137.7.33/~aluno26240/tarefa/grupo/2/",
+  "http://193.137.7.33/~aluno26240/ficha/10/",
+  "/docs/book.pdf",
+  "/docs/Prototipo.pdf",
+  "https://frontend-o9wj.onrender.com",
   "http://193.137.7.33/~aluno26240/tarefa/individual/2/",
-  "https://example3.com",
+  "/docs/Blender.pdf",
 ];
 
 // Function to load and add multiple images
@@ -919,6 +919,8 @@ const scrollSections = [
   { range: [0.72, 0.9], divId: "text10" },
   { range: [0.72, 0.9], divId: "text11" },
   { range: [0.948, 0.97], divId: "text12" },
+  { range: [0.948, 0.97], divId: "imageDiv" },
+  { range: [0.948, 0.97], divId: "imageDiv2" },
 ];
 
 function updateTextVisibility() {

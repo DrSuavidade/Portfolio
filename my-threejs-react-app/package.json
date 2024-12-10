@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "start": "vite preview --port 8080"
+    "preview": "vite preview"
   },
   "dependencies": {
     "legendary-cursor": "^1.0.2",
