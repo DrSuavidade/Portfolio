@@ -564,61 +564,71 @@ const images = [
     path: "/images/Screen3.png",
     position: { x: 150, y: 0, z: -270 },
     size: { width: 50, height: 30 },
-    rotation: { x: 0, y: Math.PI / 4, z: 0 }, // 45° rotation around Y-axis
+    rotation: { x: 0, y: Math.PI / 4, z: 0 },
+    link: "http://193.137.7.33/~aluno26240/ficha/10/", // Add link property
   },
   {
     path: "/images/Screen2.png",
     position: { x: 180, y: -25, z: -250 },
     size: { width: 40, height: 25 },
-    rotation: { x: 0, y: Math.PI / 12, z: 0 }, // Rotated in multiple axes
+    rotation: { x: 0, y: Math.PI / 12, z: 0 },
+    link: "http://193.137.7.33/~aluno26240/tarefa/grupo/2/",
   },
   {
     path: "/images/Screen1.png",
     position: { x: 190, y: 5, z: -260 },
     size: { width: 30, height: 20 },
-    rotation: { x: 0, y: Math.PI / -6, z: 0 }, // 90° rotation around Z-axis
+    rotation: { x: 0, y: Math.PI / -6, z: 0 },
+    link: "http://193.137.7.33/~aluno26240/ficha/9/",
   },
   {
     path: "/images/Verde.png",
     position: { x:300, y:-20, z:130 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
+    link: "http://193.137.7.33/~aluno26240/VerDeCor/index-color.html",
   },
   {
     path: "/images/Viseu.png",
     position: { x:295, y:-20, z:170 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
+    link: "http://193.137.7.33/~aluno26240/ViseuScout/index-color.html",
   },
   {
     path: "/images/ese.png",
     position: { x:290, y:-20, z:210 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
+    link: "https://www.instagram.com/docese_se?igsh=MWx3cnllMmVmcmVnNA==",
   },
   {
     path: "/images/Unity.jpg",
     position: { x:285, y:-20, z:250 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
+    link: "http://193.137.7.33/~aluno26240/tarefa/individual/2/",
   },
   {
     path: "/images/Blender.png",
     position: { x:280, y:-20, z:290 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
+    link: "http://193.137.7.33/~aluno26240/Blendeer/index-color.html",
   },
   {
     path: "/images/Ecos.png",
     position: { x:275, y:-20, z:330 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
+    link: "http://193.137.7.33/~aluno26240/Ecos/index-color.html",
   },
   {
     path: "/images/Ware.png",
     position: { x:270, y:-20, z:370 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
+    link: "https://frontend-o9wj.onrender.com",
   },
   // Add more images here
 ];
@@ -643,7 +653,7 @@ const links = [
 function addImages(imageArray) {
   const textureLoader = new THREE.TextureLoader();
 
-  imageArray.forEach((imageData, index) => {
+  imageArray.forEach((imageData) => {
     textureLoader.load(
       imageData.path,
       (texture) => {
@@ -671,9 +681,10 @@ function addImages(imageArray) {
           imageData.rotation.z || 0
         );
 
-        // Add hover and click functionality
-        // Exclude from bloom
-        plane.layers.disable(BLOOM_SCENE);
+        // Store the link in userData for interactivity
+        plane.userData.link = imageData.link;
+
+        // Add to interactive arrays
         clickableImages.push(plane);
         hoverStatesImages.push(false);
         originalScales.push(plane.scale.clone());
