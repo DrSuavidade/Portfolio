@@ -636,18 +636,6 @@ const images = [
 const clickableImages = []; // Store clickable image meshes
 const hoverStatesImages = []; // Track hover states for images
 const originalScales = []; // Store original scales for images
-const links = [
-  "http://193.137.7.33/~aluno26240/ficha/10/",
-  "http://193.137.7.33/~aluno26240/tarefa/grupo/2/",
-  "http://193.137.7.33/~aluno26240/ficha/9/",
-  "http://193.137.7.33/~aluno26240/VerDeCor/index-color.html",
-  "http://193.137.7.33/~aluno26240/ViseuScout/index-color.html",
-  "https://www.instagram.com/docese_se?igsh=MWx3cnllMmVmcmVnNA==",
-  "http://193.137.7.33/~aluno26240/tarefa/individual/2/",
-  "http://193.137.7.33/~aluno26240/Blendeer/index-color.html",
-  "http://193.137.7.33/~aluno26240/Ecos/index-color.html",
-  "https://frontend-o9wj.onrender.com",
-];
 
 // Function to load and add multiple images
 function addImages(imageArray) {
@@ -749,6 +737,7 @@ function onMouseClick(event) {
   }
 }
 
+// Function to handle image clicks
 function onImageClick(event) {
   // Convert mouse coordinates to normalized device coordinates (NDC)
   mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
@@ -762,11 +751,10 @@ function onImageClick(event) {
 
   if (intersects.length > 0) {
     const clickedImage = intersects[0].object; // Get the first intersected object
-    const index = clickableImages.indexOf(clickedImage);
 
-    if (index !== -1 && links[index]) {
-      // Open the corresponding link in a new tab
-      window.open(links[index], "_blank");
+    // Open the corresponding link stored in userData
+    if (clickedImage.userData.link) {
+      window.open(clickedImage.userData.link, "_blank");
     }
   }
 }
