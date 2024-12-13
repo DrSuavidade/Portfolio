@@ -181,37 +181,37 @@ function loadModel(path, position, scale, rotation) {
 // Load the models
 loadModel(
   "/model/Gengar.glb",
-  { x: -80, y: -40, z: -170 },
+  { x: -70, y: -45, z: -160 },
   { x: 1, y: 1, z: 1 },
   { x: 0, y: Math.PI / 2, z: 0 }
 );
 loadModel(
   "/model/Charizard.glb",
-  { x: -80, y: -40, z: -140 },
+  { x: -80, y: -45, z: -130 },
   { x: 8, y: 8, z: 8 },
   { x: 0, y: Math.PI / 2, z: 0 }
 );
 loadModel(
   "/model/Mario.glb",
-  { x: -90, y: -40, z: -240 },
-  { x: 7, y: 7, z: 7 },
+  { x: -60, y: -45, z: -220 },
+  { x: 6, y: 6, z: 6 },
   { x: 0, y: Math.PI / 4, z: 0 }
 );
 loadModel(
   "/model/Ditto.glb",
-  { x: -80, y: -40, z: -195 },
+  { x: -60, y: -45, z: -175 },
   { x: 7, y: 7, z: 7 },
   { x: 0, y: Math.PI / 16, z: 0 }
 );
 loadModel(
   "/model/Magnemite.glb",
-  { x: -90, y: -10, z: -210 },
+  { x: -80, y: -15, z: -200 },
   { x: 7, y: 7, z: 7 },
   { x: 0, y: Math.PI / -4, z: 0 }
 );
 loadModel(
   "/model/Magneton.glb",
-  { x: -80, y: 10, z: -250 },
+  { x: -70, y: 5, z: -230 },
   { x: 7, y: 7, z: 7 },
   { x: 0, y: Math.PI / -6, z: 0 }
 );
@@ -222,7 +222,7 @@ loader.load(
   "/model/Portfolio.glb",
   (gltf) => {
     model4 = gltf.scene;
-    model4.position.set(20, -5, 177); // Position the third model
+    model4.position.set(18, -3, 180); // Position the third model
     model4.scale.set(5, 5, 5); // Adjust scale
     model4.rotation.y = Math.PI / 1.5;
     // Enable bloom layer
@@ -245,7 +245,7 @@ loader.load(
   "/model/Pedro.glb",
   (gltf) => {
     model6 = gltf.scene;
-    model6.position.set(20, -5, 177); // Position the fourth model
+    model6.position.set(20, -8, 177); // Position the fourth model
     model6.scale.set(5, 5, 5); // Adjust scale
     model6.rotation.y = Math.PI / 1.5;
     scene.add(model6);
@@ -561,7 +561,7 @@ function animateBeans(scrollProgress) {
 // Array of image paths, positions, sizes, and rotations
 const images = [
   {
-    path: "/images/Screen1.png",
+    path: "/images/Screen3.png",
     position: { x: 150, y: 0, z: -270 },
     size: { width: 50, height: 30 },
     rotation: { x: 0, y: Math.PI / 4, z: 0 }, // 45° rotation around Y-axis
@@ -573,10 +573,10 @@ const images = [
     rotation: { x: 0, y: Math.PI / 12, z: 0 }, // Rotated in multiple axes
   },
   {
-    path: "/images/Screen3.png",
-    position: { x: 190, y: 5, z: -250 },
-    size: { width: 20, height: 15 },
-    rotation: { x: 0, y: Math.PI / -4, z: 0 }, // 90° rotation around Z-axis
+    path: "/images/Screen1.png",
+    position: { x: 190, y: 5, z: -260 },
+    size: { width: 30, height: 20 },
+    rotation: { x: 0, y: Math.PI / -6, z: 0 }, // 90° rotation around Z-axis
   },
   {
     path: "/images/Verde.png",
@@ -591,7 +591,7 @@ const images = [
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
   },
   {
-    path: "/images/Ware.png",
+    path: "/images/ese.png",
     position: { x:290, y:-20, z:210 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
@@ -603,8 +603,20 @@ const images = [
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
   },
   {
-    path: "/images/Blender.jpg",
+    path: "/images/Blender.png",
     position: { x:280, y:-20, z:290 },
+    size: { width: 20, height: 40 },
+    rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
+  },
+  {
+    path: "/images/Ecos.png",
+    position: { x:275, y:-20, z:330 },
+    size: { width: 20, height: 40 },
+    rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
+  },
+  {
+    path: "/images/Ware.png",
+    position: { x:270, y:-20, z:370 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
   },
@@ -615,14 +627,16 @@ const clickableImages = []; // Store clickable image meshes
 const hoverStatesImages = []; // Track hover states for images
 const originalScales = []; // Store original scales for images
 const links = [
-  null,
-  "http://193.137.7.33/~aluno26240/tarefa/grupo/2/",
   "http://193.137.7.33/~aluno26240/ficha/10/",
-  "/docs/book.pdf",
-  "/docs/Prototipo.pdf",
-  "https://frontend-o9wj.onrender.com",
+  "http://193.137.7.33/~aluno26240/tarefa/grupo/2/",
+  "http://193.137.7.33/~aluno26240/ficha/9/",
+  "http://193.137.7.33/~aluno26240/VerDeCor/index-color.html",
+  "http://193.137.7.33/~aluno26240/ViseuScout/index-color.html",
+  "https://www.instagram.com/docese_se?igsh=MWx3cnllMmVmcmVnNA==",
   "http://193.137.7.33/~aluno26240/tarefa/individual/2/",
-  "/docs/Blender.pdf",
+  "http://193.137.7.33/~aluno26240/Blendeer/index-color.html",
+  "http://193.137.7.33/~aluno26240/Ecos/index-color.html",
+  "https://frontend-o9wj.onrender.com",
 ];
 
 // Function to load and add multiple images
@@ -908,18 +922,21 @@ function moveModelCloser(model, offset) {
 
 const scrollSections = [
   { range: [0, 0.03], divId: "text1" },
+  { range: [0, 0.03], divId: "imageDiv" },
   { range: [0.12, 0.2], divId: "text2" },
   { range: [0.12, 0.2], divId: "text3" },
   { range: [0.3, 0.38], divId: "text4" },
   { range: [0.3, 0.38], divId: "text5" },
+  { range: [0.3, 0.38], divId: "text" },
   { range: [0.43, 0.46], divId: "text6" },
   { range: [0.43, 0.46], divId: "text7" },
+  { range: [0.43, 0.46], divId: "text77" },
   { range: [0.58, 0.64], divId: "text8" },
   { range: [0.58, 0.64], divId: "text9" },
   { range: [0.72, 0.9], divId: "text10" },
   { range: [0.72, 0.9], divId: "text11" },
   { range: [0.948, 0.97], divId: "text12" },
-  { range: [0.948, 0.97], divId: "imageDiv" },
+  { range: [0.948, 0.97], divId: "imageDiv1" },
   { range: [0.948, 0.97], divId: "imageDiv2" },
 ];
 
