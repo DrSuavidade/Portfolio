@@ -959,6 +959,7 @@ function moveModelCloser(model, offset) {
 }
 
 const scrollSections = [
+  { range: [0, 0.03], divId: "text111" },
   { range: [0, 0.03], divId: "text1" },
   { range: [0, 0.03], divId: "imageDiv" },
   { range: [0.12, 0.2], divId: "text2" },

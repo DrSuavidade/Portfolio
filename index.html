@@ -49,6 +49,14 @@
         transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
       }
 
+      #text111 {
+        top: 0%;
+        left: 50%; /* Positions the element at the horizontal center of the viewport */
+  transform: translateX(-50%);
+        font-family: "Montserrat", sans-serif;
+        font-weight: 50;
+      }
+
       #text1 {
         top: 88%;
         left: 50%; /* Positions the element at the horizontal center of the viewport */
@@ -58,8 +66,9 @@
       }
 
       #text2 {
-        top: 35%;
+        bottom: 50%;
         left: 8%;
+        transform: translateY(30%);
         font-family: "Montserrat", sans-serif;
         font-size: 2.5em;
         font-weight: 700;
@@ -73,8 +82,9 @@
       }
 
       #text4 {
-        top: 73%;
+        bottom: 20%;
         left: 10%;
+        transform: translateY(40%);
         font-family: "Montserrat", sans-serif;
         font-size: 2.5em;
         font-weight: 700;
@@ -96,15 +106,16 @@
       }
 
       #text6 {
-        bottom: 50%;
+        bottom: 60%;
         right: 10%;
+        transform: translateY(30%);
         font-family: "Montserrat", sans-serif;
         font-size: 2.5em;
         font-weight: 700;
       }
 
       #text7 {
-        bottom: 43%;
+        top: 38%;
         right: 13%;
         font-family: "Montserrat", sans-serif;
         font-weight: 100;
@@ -119,15 +130,16 @@
       }
 
       #text8 {
-        bottom: 49%;
+        bottom: 60%;
         left: 10%;
+        transform: translateY(30%);
         font-family: "Montserrat", sans-serif;
         font-size: 2.5em;
         font-weight: 700;
       }
 
       #text9 {
-        bottom: 43%;
+        top: 41%;
         left: 10%;
         font-family: "Montserrat", sans-serif;
         font-weight: 100;
@@ -206,6 +218,7 @@
   </head>
   <body>
     <div id="rocket-cursor"></div>
+    <div id="text111" class="hidden-text">Oriente o ecrã horizontalmente para melhor visualização</div>
     <div id="text1" class="hidden-text">Continua a dar scroll</div>
     <div id="imageDiv" class="hidden-text">
         <img src="/images/arrow.png" alt="Linkedin Profile" />
