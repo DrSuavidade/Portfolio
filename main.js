@@ -15,6 +15,16 @@ const camera = new THREE.PerspectiveCamera(
 camera.position.set(20, 30, 0); // Starting point
 camera.lookAt(0, 0, 0);
 
+const mobileCamera = new THREE.PerspectiveCamera(
+  75, // Field of view
+  9 / 16, // Aspect ratio for mobile
+  0.1, // Near clipping plane
+  2000 // Far clipping plane for larger depth of field
+);
+mobileCamera.position.copy(camera.position); // Copy initial position
+mobileCamera.lookAt(0, 0, 0);
+
+
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setAnimationLoop(animate);
@@ -689,6 +699,35 @@ function addImages(imageArray) {
 // Add all images to the scene
 addImages(images);
 
+let activeCamera = camera; // Default to desktop camera
+
+function onWindowResize() {
+  // Determine if the device is in portrait mode (mobile)
+  const isPortrait = window.innerWidth < window.innerHeight;
+
+  // Adjust the active camera based on orientation
+  if (isPortrait) {
+    activeCamera = mobileCamera; // Use the mobile camera for portrait mode
+  } else {
+    activeCamera = camera; // Use the default camera for landscape mode
+  }
+
+  // Update the active camera's aspect ratio and projection matrix
+  activeCamera.aspect = window.innerWidth / window.innerHeight;
+  activeCamera.updateProjectionMatrix();
+
+  // Resize the renderer to fit the new dimensions
+  renderer.setSize(window.innerWidth, window.innerHeight);
+
+  // Update the composer (for post-processing effects like bloom) to match the new size
+  composer.setSize(window.innerWidth, window.innerHeight);
+}
+
+// Attach the resize event listener to handle window resizing and orientation changes
+window.addEventListener("resize", onWindowResize);
+
+
+
 // Create a canvas and draw a gradient on it
 const canvas = document.createElement("canvas");
 canvas.width = 1024; // Set the canvas resolution
@@ -927,9 +966,9 @@ const scrollSections = [
   { range: [0.3, 0.38], divId: "text4" },
   { range: [0.3, 0.38], divId: "text5" },
   { range: [0.3, 0.38], divId: "text" },
-  { range: [0.43, 0.46], divId: "text6" },
-  { range: [0.43, 0.46], divId: "text7" },
-  { range: [0.43, 0.46], divId: "text77" },
+  { range: [0.43, 0.48], divId: "text6" },
+  { range: [0.43, 0.48], divId: "text7" },
+  { range: [0.43, 0.47], divId: "text77" },
   { range: [0.58, 0.64], divId: "text8" },
   { range: [0.58, 0.64], divId: "text9" },
   { range: [0.72, 0.9], divId: "text10" },

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"  />
     <title>My first three.js app</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +13,10 @@
       body {
         margin: 0;
       }
+
+      canvas {
+  display: block; /* Removes potential padding issues */
+}
 
       #rocket-cursor {
     position: fixed;
@@ -47,7 +51,8 @@
 
       #text1 {
         top: 88%;
-        left: 43%;
+        left: 50%; /* Positions the element at the horizontal center of the viewport */
+  transform: translateX(-50%);
         font-family: "Montserrat", sans-serif;
         font-weight: 100;
       }
@@ -84,29 +89,31 @@
 
       #text {
         top: 1%;
-        left: 40%;
+        left: 50%; /* Positions the element at the horizontal center of the viewport */
+  transform: translateX(-50%);
         font-family: "Montserrat", sans-serif;
         font-weight: 100;
       }
 
       #text6 {
         bottom: 50%;
-        left: 60%;
+        right: 10%;
         font-family: "Montserrat", sans-serif;
         font-size: 2.5em;
         font-weight: 700;
       }
 
       #text7 {
-        bottom: 44%;
-        left: 60%;
+        bottom: 43%;
+        right: 13%;
         font-family: "Montserrat", sans-serif;
         font-weight: 100;
       }
 
       #text77 {
         top: 1%;
-        left: 40%;
+        left: 50%; /* Positions the element at the horizontal center of the viewport */
+  transform: translateX(-50%);
         font-family: "Montserrat", sans-serif;
         font-weight: 100;
       }
@@ -128,7 +135,8 @@
 
       #text10 {
         bottom: 87%;
-        left: 45%;
+        left: 50%; /* Positions the element at the horizontal center of the viewport */
+  transform: translateX(-50%);
         font-family: "Montserrat", sans-serif;
         font-size: 2.5em;
         font-weight: 700;
@@ -136,7 +144,8 @@
 
       #text11 {
         bottom: 85%;
-        left: 45%;
+        left: 50%; /* Positions the element at the horizontal center of the viewport */
+  transform: translateX(-50%);
         font-family: "Montserrat", sans-serif;
         font-weight: 100;
       }
@@ -151,7 +160,8 @@
 
       #imageDiv {
     top: 92%; /* Adjust as needed */
-    left: 47%; /* Adjust as needed */
+    left: 50%; /* Positions the element at the horizontal center of the viewport */
+  transform: translateX(-50%); /* Adjust as needed */
   }
 
   #imageDiv img {
@@ -163,7 +173,7 @@
       
       #imageDiv1 {
     top: 25%; /* Adjust as needed */
-    left: 63%; /* Adjust as needed */
+    left: 76%; /* Adjust as needed */
   }
 
   #imageDiv1 a {
@@ -178,7 +188,7 @@
 
   #imageDiv2 {
     top: 24.7%; /* Adjust as needed */
-    left: 68%; /* Adjust as needed */
+    right: 21%; /* Adjust as needed */
   }
 
   #imageDiv2 a {
