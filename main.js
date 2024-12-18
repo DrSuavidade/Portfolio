@@ -3,6 +3,8 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { EffectComposer } from "three/examples/jsm/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/examples/jsm/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/examples/jsm/postprocessing/UnrealBloomPass.js";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
+
 
 // Scene setup
 const scene = new THREE.Scene();
@@ -158,6 +160,12 @@ const originalPositions = [];
 
 // GLTF Loader setup
 const loader = new GLTFLoader();
+
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath("https://www.gstatic.com/draco/versioned/decoders/1.5.7/"); // Update with the actual path
+dracoLoader.setDecoderConfig({type: 'js'});
+loader.setDRACOLoader(dracoLoader);
+
 
 // Function to load a model and add it to hoverModels
 function loadModel(path, position, scale, rotation) {
