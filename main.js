@@ -583,70 +583,70 @@ const images = [
     position: { x: 150, y: 0, z: -270 },
     size: { width: 50, height: 30 },
     rotation: { x: 0, y: Math.PI / 4, z: 0 },
-    link: "http://193.137.7.33/~aluno26240/ficha/10/", // Add link property
+    link: "https://www.youtube.com/watch?v=4jfOTmMSBDI", // Add link property
   },
   {
     path: "/images/Screen2.png",
     position: { x: 180, y: -25, z: -250 },
     size: { width: 40, height: 25 },
     rotation: { x: 0, y: Math.PI / 12, z: 0 },
-    link: "http://193.137.7.33/~aluno26240/tarefa/grupo/2/",
+    link: "https://landingpage-psi-olive.vercel.app/",
   },
   {
     path: "/images/Screen1.png",
     position: { x: 190, y: 5, z: -260 },
     size: { width: 30, height: 20 },
     rotation: { x: 0, y: Math.PI / -6, z: 0 },
-    link: "http://193.137.7.33/~aluno26240/ficha/9/",
+    link: "https://oioi-rho.vercel.app",
   },
   {
-    path: "/images/Verde.png",
+    path: "/images/RA.png",
     position: { x:300, y:-20, z:130 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
-    link: "http://193.137.7.33/~aluno26240/VerDeCor/index-color.html",
+    link: "https://github.com/DrSuavidade/EstagioIPV-V4Y/blob/main/EntregaFinal/Relat%C3%B3rioEstagio_pv26240.pdf",
   },
   {
     path: "/images/Viseu.png",
     position: { x:295, y:-20, z:170 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
-    link: "http://193.137.7.33/~aluno26240/ViseuScout/index-color.html",
+    link: "https://avscouts.onrender.com/login",
   },
   {
     path: "/images/ese.png",
     position: { x:290, y:-20, z:210 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
-    link: "https://www.instagram.com/docese_se?igsh=MWx3cnllMmVmcmVnNA==",
+    link: "https://github.com/DrSuavidade",
   },
   {
-    path: "/images/Unity.jpg",
+    path: "/images/Verde.png",
     position: { x:285, y:-20, z:250 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
-    link: "http://193.137.7.33/~aluno26240/tarefa/individual/2/",
+    link: "https://drive.google.com/file/d/1KWQkvEbcv9feTh1SE-AkszvRRSxJ55Me/view?usp=sharing",
   },
   {
     path: "/images/Blender.png",
     position: { x:280, y:-20, z:290 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
-    link: "http://193.137.7.33/~aluno26240/Blendeer/index-color.html",
+    link: "https://drive.google.com/file/d/1kbA0kgXoS3ZrUGcD-LjP7TUWapffaZGA/view?usp=sharing",
   },
   {
     path: "/images/Ecos.png",
     position: { x:275, y:-20, z:330 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
-    link: "http://193.137.7.33/~aluno26240/Ecos/index-color.html",
+    link: "https://drive.google.com/file/d/1wTTMSXjCj_lcpETv-mxrPCS_3g066D6I/view?usp=sharing",
   },
   {
-    path: "/images/Ware.png",
+    path: "/images/CV.png",
     position: { x:270, y:-20, z:370 },
     size: { width: 20, height: 40 },
     rotation: { x: 0, y: Math.PI / -1.8, z: 0 }, // 90° rotation around Z-axis
-    link: "https://frontend-o9wj.onrender.com",
+    link: "https://drive.google.com/file/d/1fS8qZRC2neINublUwFnzw71-bQRfzalN/view?usp=sharing",
   },
   // Add more images here
 ];
